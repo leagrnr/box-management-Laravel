@@ -16,7 +16,7 @@
 
 <body>
 <div class="flex flex-col items-center">
-    <h1 class="text-white font-bold font-xl mb-5">Modifier d'un box</h1>
+    <h1 class="text-white font-bold font-xl mb-5">Modifier un box</h1>
 
     <hr>
 
@@ -28,47 +28,31 @@
                 <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name"> Nom : </label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="nom" id="nom" value="{{$box->nom}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" >
+                <input type="text" name="name" id="name" value="{{$box->name}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" >
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-password">Adresse : </label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-address">Adresse : </label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="adresse" id="adresse" value="{{$box->adresse}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="text" name="address" id="address" value="{{$box->address}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-ville">Ville : </label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-city">Ville : </label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="ville" id="ville" value="{{$box->ville}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="text" name="city" id="city" value="{{$box->city}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-pays">Pays : </label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-country">Pays : </label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="pays" id="pays" value="{{$box->pays}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
-            </div>
-        </div>
-        <div class="md:flex md:items-center mb-6">
-            <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-telephone">Téléphone : </label>
-            </div>
-            <div class="md:w-2/3">
-                <input type="text" name="telephone" id="telephone" value="{{$box->telephone}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
-            </div>
-        </div>
-        <div class="md:flex md:items-center mb-6">
-            <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-email">Email : </label>
-            </div>
-            <div class="md:w-2/3">
-                <input type="email" name="email" id="email" value="{{$box->email}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="text" name="country" id="country" value="{{$box->country}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
@@ -76,15 +60,15 @@
                 <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-m²">m² : </label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="m²" id="m²" value="{{$box->m²}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="number" name="m²" id="m²" value="{{$box->m²}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-prix_par_mois">Prix par mois : </label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-price_per_month">Prix par mois : </label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="prix_par_mois" id="prix_par_mois" value="{{$box->prix_par_mois}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="number" name="price_per_month" id="price_per_month" value="{{$box->price_per_month}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
@@ -92,15 +76,15 @@
                 <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-description">Description : </label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="description" id="description" value="{{$box->description}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <textarea name="description" id="description" rows="5" cols="5" value="{{$box->description}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"></textarea>
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-disponible">Disponible : </label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-available">Disponible : </label>
             </div>
             <div class="md:w-2/3 flex items-center">
-                <input type="checkbox" name="disponible" id="disponible" class="form-checkbox h-5 w-5 text-blue-600" value="1" {{ $box->disponible ? 'checked' : '' }}>
+                <input type="checkbox" name="available" id="available" class="form-checkbox h-5 w-5 text-blue-600" value="1" {{ $box->available ? 'checked' : '' }}>
             </div>
         </div>
         <div class="md:flex md:items-center">

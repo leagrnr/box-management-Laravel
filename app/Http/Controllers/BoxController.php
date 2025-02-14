@@ -24,26 +24,24 @@ class BoxController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'nom' => 'required|string',
-            'adresse' => 'required|string',
-            'ville' => 'required|string',
-            'pays' => 'required|string',
-            'telephone' => 'required|string',
-            'email' => 'required|email',
-            'm²' => 'required|string',
-            'prix_par_mois' => 'required|string',
+            'name' => 'required|string|max:255',
+            'address' => 'required|string|max:255',
+            'city' => 'required|string|max:255',
+            'country' => 'required|string|max:255',
+            'm²' => 'required|numeric',
+            'price_per_month' => 'required|numeric',
             'description' => 'required|string',
-            'disponible' => 'boolean'
+            'available' => 'boolean'
         ]);
 
         Box::create([
             ...$validated,
             'user_id' => auth()->id(),
-            'disponible' => $request->has('disponible')
+            'available' => $request->has('available')
         ]);
 
         return redirect()->route('boxes.index')
-            ->with('success', 'Box ajouté avec succès');
+            ->with('success', 'Box created successfully.');
     }
 
     public function show($id)
@@ -62,21 +60,19 @@ class BoxController extends Controller
     {
         $box = Box::where('user_id', Auth::id())->findOrFail($id);
         $validated = $request->validate([
-            'nom' => 'required|string',
-            'adresse' => 'required|string',
-            'ville' => 'required|string',
-            'pays' => 'required|string',
-            'telephone' => 'required|string',
-            'email' => 'required|email',
-            'm²' => 'required|string',
-            'prix_par_mois' => 'required|string',
+            'name' => 'required|string|max:255',
+            'address' => 'required|string|max:255',
+            'city' => 'required|string|max:255',
+            'country' => 'required|string|max:255',
+            'm²' => 'required|numeric',
+            'price_per_month' => 'required|numeric',
             'description' => 'required|string',
-            'disponible' => 'boolean'
+            'available' => 'boolean'
         ]);
 
         $box->update([
             ...$validated,
-            'disponible' => $request->has('disponible')
+            'available' => $request->has('available')
         ]);
 
         return redirect()->route('boxes.index');
