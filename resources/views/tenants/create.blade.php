@@ -23,18 +23,18 @@
         @csrf
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="nom">Nom :</label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="last_name">Nom :</label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="nom" id="nom" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="text" name="last_name" id="last_name" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="prenom">Prénom :</label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="name">Prénom :</label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="prenom" id="prenom" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="text" name="name" id="name" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
@@ -47,10 +47,10 @@
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="telephone">Téléphone :</label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="phone">Téléphone :</label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="telephone" id="telephone" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="tel" name="phone" id="phone" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
@@ -63,50 +63,50 @@
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="adresse">Adresse :</label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="address">Adresse :</label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="adresse" id="adresse" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="text" name="address" id="address" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="ville">Ville :</label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="city">Ville :</label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="ville" id="ville" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="text" name="city" id="city" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="pays">Pays :</label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="country">Pays :</label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="pays" id="pays" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="text" name="country" id="country" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="date_de_naissance">Date de naissance :</label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="date_of_birth">Date de naissance :</label>
             </div>
             <div class="md:w-2/3">
-                <input type="date" name="date_de_naissance" id="date_de_naissance" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="date" name="date_of_birth" id="date_of_birth" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="lieu_de_naissance">Lieu de naissance :</label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="place_of_birth">Lieu de naissance :</label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="lieu_de_naissance" id="lieu_de_naissance" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="text" name="place_of_birth" id="place_of_birth" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="compte_bancaire">Compte bancaire :</label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="bank_account">Compte bancaire :</label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="compte_bancaire" id="compte_bancaire" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="text" name="bank_account" id="bank_account" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center">

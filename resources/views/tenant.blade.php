@@ -29,8 +29,8 @@
             <tbody>
             @foreach ($tenants as $tenant)
                 <tr>
-                    <td class="border border-sky-500 px-2">{{ $tenant->nom }}</td>
-                    <td class="border border-sky-500 px-2">{{ $tenant->prenom }}</td>
+                    <td class="border border-sky-500 px-2">{{ $tenant->last_name }}</td>
+                    <td class="border border-sky-500 px-2">{{ $tenant->name }}</td>
                     <td class="border border-sky-500 px-2">
                         <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold px-4 my-1 w-full rounded">
                             <a href="{{ route('tenants.edit', $tenant->id) }}">Modifier</a>

@@ -10,16 +10,16 @@ class Tenant extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nom',
-        'prenom',
+        'last_name',
+        'name',
         'email',
-        'telephone',
+        'phone',
         'profession',
-        'adresse',
-        'ville',
-        'pays',
-        'date_de_naissance',
-        'lieu_de_naissance',
-        'compte_bancaire',
+        'address',
+        'city',
+        'country',
+        'date_of_birth',
+        'place_of_birth',
+        'bank_account',
     ];
 }

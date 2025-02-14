@@ -22,23 +22,23 @@ class TenantController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'nom' => 'required|string',
-            'prenom' => 'required|string',
+            'last_name' => 'required|string',
+            'name' => 'required|string',
             'email' => 'required|email',
-            'telephone' => 'required|string',
+            'phone' => 'required|string',
             'profession' => 'required|string',
-            'adresse' => 'required|string',
-            'ville' => 'required|string',
-            'pays' => 'required|string',
-            'date_de_naissance' => 'required|string',
-            'lieu_de_naissance' => 'required|string',
-            'compte_bancaire' => 'required|string',
+            'address' => 'required|string',
+            'city' => 'required|string',
+            'country' => 'required|string',
+            'date_of_birth' => 'required|string',
+            'place_of_birth' => 'required|string',
+            'bank_account' => 'required|string',
         ]);
 
         Tenant::create($validated);
 
         return redirect()->route('tenants.index')
-            ->with('success', 'Tenant ajouté avec succès');
+            ->with('success', 'Tenant created success');
     }
 
     public function show($id)
@@ -56,24 +56,24 @@ class TenantController extends Controller
     public function update(Request $request, $id)
     {
         $validated = $request->validate([
-            'nom' => 'required|string',
-            'prenom' => 'required|string',
+            'last_name' => 'required|string',
+            'name' => 'required|string',
             'email' => 'required|email',
-            'telephone' => 'required|string',
+            'phone' => 'required|string',
             'profession' => 'required|string',
-            'adresse' => 'required|string',
-            'ville' => 'required|string',
-            'pays' => 'required|string',
-            'date_de_naissance' => 'required|string',
-            'lieu_de_naissance' => 'required|string',
-            'compte_bancaire' => 'required|string',
+            'address' => 'required|string',
+            'city' => 'required|string',
+            'country' => 'required|string',
+            'date_of_birth' => 'required|string',
+            'place_of_birth' => 'required|string',
+            'bank_account' => 'required|string',
         ]);
 
         $tenant = Tenant::findOrFail($id);
         $tenant->update($validated);
 
         return redirect()->route('tenants.index')
-            ->with('success', 'Tenant modifié avec succès');
+            ->with('success', 'Tenant modify with success');
     }
 
     public function destroy($id)
@@ -82,6 +82,6 @@ class TenantController extends Controller
         $tenant->delete();
 
         return redirect()->route('tenants.index')
-            ->with('success', 'Tenant supprimé avec succès');
+            ->with('success', 'Tenant deleted with success');
     }
 }

@@ -11,7 +11,7 @@
 <body>
     <x-slot name="header">
         <h2 class="text-white font-bold font-xl">
-            {{ __('Box Details') }}
+            {{ __('Information box') }}
         </h2>
     </x-slot>
 
@@ -24,27 +24,19 @@
             </tr>
             <tr>
                 <th class="border border-sky-500 px-2">Nom</th>
-                <td class="border border-sky-500 px-2">{{ $box->nom }}</td>
+                <td class="border border-sky-500 px-2">{{ $box->name }}</td>
             </tr>
             <tr>
                 <th class="border border-sky-500 px-2">Adresse</th>
-                <td class="border border-sky-500 px-2">{{ $box->adresse }}</td>
+                <td class="border border-sky-500 px-2">{{ $box->address }}</td>
             </tr>
             <tr>
                 <th class="border border-sky-500 px-2">Ville</th>
-                <td class="border border-sky-500 px-2">{{ $box->ville }}</td>
+                <td class="border border-sky-500 px-2">{{ $box->city }}</td>
             </tr>
             <tr>
                 <th class="border border-sky-500 px-2">Pays</th>
-                <td class="border border-sky-500 px-2">{{ $box->pays }}</td>
-            </tr>
-            <tr>
-                <th class="border border-sky-500 px-2">Téléphone</th>
-                <td class="border border-sky-500 px-2">{{ $box->telephone }}</td>
-            </tr>
-            <tr>
-                <th class="border border-sky-500 px-2">Email</th>
-                <td class="border border-sky-500 px-2">{{ $box->email }}</td>
+                <td class="border border-sky-500 px-2">{{ $box->country }}</td>
             </tr>
             <tr>
                 <th class="border border-sky-500 px-2">m²</th>
@@ -52,7 +44,7 @@
             </tr>
             <tr>
                 <th class="border border-sky-500 px-2">Prix par mois</th>
-                <td class="border border-sky-500 px-2">{{ $box->prix_par_mois }}</td>
+                <td class="border border-sky-500 px-2">{{ $box->price_per_month }}</td>
             </tr>
             <tr>
                 <th class="border border-sky-500 px-2">Description</th>
@@ -60,7 +52,7 @@
             </tr>
             <tr>
                 <th class="border border-sky-500 px-2">Disponible</th>
-                <td class="border border-sky-500 px-2">{{ $box->disponible ? 'Oui' : 'Non' }}</td>
+                <td class="border border-sky-500 px-2">{{ $box->available ? 'Oui' : 'Non' }}</td>
             </tr>
         </table>
     </div>

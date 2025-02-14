@@ -14,16 +14,14 @@ return new class extends Migration
         Schema::create('boxes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('nom');
-            $table->string('adresse');
-            $table->string('ville');
-            $table->string('pays');
-            $table->string('telephone');
-            $table->string('email');
+            $table->string('name');
+            $table->string('address');
+            $table->string('city');
+            $table->string('country');
             $table->string('m²');
-            $table->string('prix_par_mois');
+            $table->string('price_per_month');
             $table->string('description');
-            $table->boolean('disponible');
+            $table->boolean('available');
             $table->timestamps();
         });
     }
