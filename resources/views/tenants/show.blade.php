@@ -5,12 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tenant Details</title>
+    <title>Détails du locataire</title>
 </head>
 <x-app-layout>
     <x-slot name="header">
         <h2 class="text-white font-bold font-xl">
-            {{ __('Tenant Details') }}
+            {{ __('Détails du locataire') }}
         </h2>
     </x-slot>
     <body>
@@ -22,11 +22,11 @@
         <table class="text-white font-bold font-xl m-auto border-collapse border border-sky-500 mb-5">
             <tr>
                 <th class="border border-sky-500 py-2">Nom</th>
-                <td class="border border-sky-500 py-2">{{ $tenant->nom }}</td>
+                <td class="border border-sky-500 py-2">{{ $tenant->last_name }}</td>
             </tr>
             <tr>
                 <th class="border border-sky-500 py-2">Prénom</th>
-                <td class="border border-sky-500 py-2">{{ $tenant->prenom }}</td>
+                <td class="border border-sky-500 py-2">{{ $tenant->name }}</td>
             </tr>
             <tr>
                 <th class="border border-sky-500 py-2">Email</th>
@@ -34,7 +34,7 @@
             </tr>
             <tr>
                 <th class="border border-sky-500 py-2">Téléphone</th>
-                <td class="border border-sky-500 py-2">{{ $tenant->telephone }}</td>
+                <td class="border border-sky-500 py-2">{{ $tenant->phone }}</td>
             </tr>
             <tr>
                 <th class="border border-sky-500 py-2">Profession</th>
@@ -42,27 +42,27 @@
             </tr>
             <tr>
                 <th class="border border-sky-500 py-2">Adresse</th>
-                <td class="border border-sky-500 py-2">{{ $tenant->adresse }}</td>
+                <td class="border border-sky-500 py-2">{{ $tenant->address }}</td>
             </tr>
             <tr>
                 <th class="border border-sky-500 py-2">Ville</th>
-                <td class="border border-sky-500 py-2">{{ $tenant->ville }}</td>
+                <td class="border border-sky-500 py-2">{{ $tenant->city }}</td>
             </tr>
             <tr>
                 <th class="border border-sky-500 py-2">Pays</th>
-                <td class="border border-sky-500 py-2">{{ $tenant->pays }}</td>
+                <td class="border border-sky-500 py-2">{{ $tenant->country }}</td>
             </tr>
             <tr>
                 <th class="border border-sky-500 py-2">Date de naissance</th>
-                <td class="border border-sky-500 py-2">{{ $tenant->date_de_naissance }}</td>
+                <td class="border border-sky-500 py-2">{{ $tenant->date_of_birth }}</td>
             </tr>
             <tr>
                 <th class="border border-sky-500 py-2">Lieu de naissance</th>
-                <td class="border border-sky-500 py-2">{{ $tenant->lieu_de_naissance }}</td>
+                <td class="border border-sky-500 py-2">{{ $tenant->place_of_birth }}</td>
             </tr>
             <tr>
                 <th class="border border-sky-500 py-2">Compte bancaire</th>
-                <td class="border border-sky-500 py-2">{{ $tenant->compte_bancaire }}</td>
+                <td class="border border-sky-500 py-2">{{ $tenant->bank_account }}</td>
             </tr>
         </table>
     </div>

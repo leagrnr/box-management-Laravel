@@ -13,17 +13,17 @@ return new class extends Migration
     {
         Schema::create('tenants', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
-            $table->string('prenom');
+            $table->string('last_name');
+            $table->string('name');
             $table->string('email');
-            $table->string('telephone');
+            $table->string('phone');
             $table->string('profession');
-            $table->string('adresse');
-            $table->string('ville');
-            $table->string('pays');
-            $table->string('date_de_naissance');
-            $table->string('lieu_de_naissance');
-            $table->string('compte_bancaire');
+            $table->string('address');
+            $table->string('city');
+            $table->string('country');
+            $table->string('date_of_birth');
+            $table->string('place_of_birth');
+            $table->string('bank_account');
             $table->timestamps();
         });
     }
