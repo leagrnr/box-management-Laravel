@@ -14,6 +14,18 @@ class ContractModel extends Model
         'user_id',
     ];
 
+    public function replaceVariables(array $variables)
+    {
+        $content = $this->content;
+
+        foreach ($variables as $key => $value) {
+            $content = str_replace(['{{ ' . $key . ' }}', '{{' . $key . '}}'], $value, $content);
+
+        }
+
+        return $content;
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);
