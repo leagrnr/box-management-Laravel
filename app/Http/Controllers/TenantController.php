@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tenant;
+use Illuminate\Support\Facades\Auth;
 
 class TenantController extends Controller
 {
     public function index()
     {
-        $tenants = Tenant::latest()->get();
+        $tenants = auth()->user()->tenants()->latest()->get();
         return view('tenant', compact('tenants'));
     }
 
@@ -35,7 +36,10 @@ class TenantController extends Controller
             'bank_account' => 'required|string',
         ]);
 
-        Tenant::create($validated);
+        Tenant::create([
+            ...$validated,
+            'user_id' => auth()->id(),
+        ]);
 
         return redirect()->route('tenants.index')
             ->with('success', 'Tenant created success');
@@ -43,13 +47,13 @@ class TenantController extends Controller
 
     public function show($id)
     {
-        $tenant = Tenant::findOrFail($id);
+        $tenant = Tenant::where('user_id', Auth::id())->findOrFail($id);
         return view('tenants.show', compact('tenant'));
     }
 
     public function edit($id)
     {
-        $tenant = Tenant::findOrFail($id);
+        $tenant = Tenant::where('user_id', Auth::id())->findOrFail($id);
         return view('tenants.edit', compact('tenant'));
     }
 
@@ -78,7 +82,7 @@ class TenantController extends Controller
 
     public function destroy($id)
     {
-        $tenant = Tenant::findOrFail($id);
+        $tenant = Tenant::where('user_id', Auth::id())->findOrFail($id);
         $tenant->delete();
 
         return redirect()->route('tenants.index')
