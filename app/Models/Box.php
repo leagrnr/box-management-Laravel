@@ -10,21 +10,24 @@ class Box extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nom',
-        'adresse',
-        'ville',
-        'pays',
-        'telephone',
-        'email',
+        'name',
+        'address',
+        'city',
+        'country',
         'm²',
-        'prix_par_mois',
+        'price_per_month',
         'description',
-        'disponible',
+        'available',
         'user_id',
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function contracts()
+    {
+        return $this->hasMany(Contract::class);
     }
 }

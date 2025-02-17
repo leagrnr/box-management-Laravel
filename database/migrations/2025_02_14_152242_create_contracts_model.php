@@ -11,17 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('boxes', function (Blueprint $table) {
+        Schema::create('contracts_model', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('name');
-            $table->string('address');
-            $table->string('city');
-            $table->string('country');
-            $table->string('m²');
-            $table->string('price_per_month');
-            $table->string('description');
-            $table->boolean('available');
+            $table->json('content');
             $table->timestamps();
         });
     }
@@ -31,10 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('boxes');
+        Schema::dropIfExists('contracts_model');
     }
-
-    protected $casts = [
-        'disponible' => 'boolean'
-    ];
 };

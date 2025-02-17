@@ -23,50 +23,34 @@
     @csrf
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name"> Nom : </label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-name"> Nom : </label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="nom" id="nom" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" >
+                <input type="text" name="name" id="name" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" >
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-password">Adresse : </label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-address">Adresse : </label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="adresse" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="text" name="address" id="address" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-ville">Ville : </label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-city">Ville : </label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="ville" id="ville" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="text" name="city" id="city" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-pays">Pays : </label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-country">Pays : </label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="pays" id="pays" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
-            </div>
-        </div>
-        <div class="md:flex md:items-center mb-6">
-            <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-telephone">Téléphone : </label>
-            </div>
-            <div class="md:w-2/3">
-                <input type="text" name="telephone" id="telephone" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
-            </div>
-        </div>
-        <div class="md:flex md:items-center mb-6">
-            <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-email">Email : </label>
-            </div>
-            <div class="md:w-2/3">
-                <input type="email" name="email" id="email" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="text" name="country" id="country" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
@@ -74,15 +58,15 @@
                 <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-m²">m² : </label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="m²" id="m²" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="number" name="m²" id="m²" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-prix_par_mois">Prix par mois : </label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-price_per_month">Prix par mois : </label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="prix_par_mois" id="prix_par_mois" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <input type="number" name="price_per_month" id="price_per_month" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
@@ -90,15 +74,15 @@
                 <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-description">Description : </label>
             </div>
             <div class="md:w-2/3">
-                <input type="text" name="description" id="description" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
+                <textarea name="description" id="description" rows="5" cols="5" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"></textarea>
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-disponible">Disponible : </label>
+                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-available">Disponible : </label>
             </div>
             <div class="md:w-2/3">
-                <input type="checkbox" name="disponible" id="disponible" class="form-checkbox h-5 w-5 text-blue-600" value="1" {{ $box->disponible ? 'checked' : '' }}>
+                <input type="checkbox" name="available" id="available" class="form-checkbox h-5 w-5 text-blue-600" value="1" {{ $box->available ? 'checked' : '' }}>
             </div>
         </div>
         <div class="md:flex md:items-center">
