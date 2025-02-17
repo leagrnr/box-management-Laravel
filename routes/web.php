@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BoxController;
 use App\Http\Controllers\TenantController;
 use App\Http\Controllers\ContractModelController;
+use App\Http\Controllers\ContractController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -42,6 +43,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/contracts_model/{id}/edit', [ContractModelController::class, 'edit'])->name('contracts_model.edit');
     Route::put('/contracts_model/{id}/update', [ContractModelController::class, 'update'])->name('contracts_model.update');
     Route::delete('/contracts_model/{id}', [ContractModelController::class, 'destroy'])->name('contracts_model.destroy');
+
+// CONTRACTS
+    Route::get('/contracts', [ContractController::class, 'index'])->name('contracts.index');
+    Route::get('/contracts/create', [ContractController::class, 'create'])->name('contracts.create');
+    Route::get('/contracts/{id}', [ContractController::class, 'show'])->name('contracts.show');
+    Route::post('/contracts', [ContractController::class, 'store'])->name('contracts.store');
+    Route::get('/contracts/{id}/edit', [ContractController::class, 'edit'])->name('contracts.edit');
+    Route::put('/contracts/{id}/update', [ContractController::class, 'update'])->name('contracts.update');
+    Route::delete('/contracts/{id}', [ContractController::class, 'destroy'])->name('contracts.destroy');
 
 //    PROFILE
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
