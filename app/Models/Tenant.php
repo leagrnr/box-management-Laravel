@@ -10,6 +10,7 @@ class Tenant extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'last_name',
         'name',
         'email',
@@ -22,4 +23,14 @@ class Tenant extends Model
         'place_of_birth',
         'bank_account',
     ];
+
+    public function contracts()
+    {
+        return $this->hasMany(Contract::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

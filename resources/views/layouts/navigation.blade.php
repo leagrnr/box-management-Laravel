@@ -26,6 +26,16 @@
                         {{ __('Locataire') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('contracts_model.index')" :active="request()->routeIs('contracts_model')">
+                        {{ __('Modèle de contrat') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('contracts.index')" :active="request()->routeIs('contracts.index')">
+                        {{ __('Contrat') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->

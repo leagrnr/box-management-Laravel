@@ -11,20 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tenants', function (Blueprint $table) {
+        Schema::create('contracts_model', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('last_name');
             $table->string('name');
-            $table->string('email');
-            $table->string('phone');
-            $table->string('profession');
-            $table->string('address');
-            $table->string('city');
-            $table->string('country');
-            $table->string('date_of_birth');
-            $table->string('place_of_birth');
-            $table->string('bank_account');
+            $table->json('content');
             $table->timestamps();
         });
     }
@@ -34,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tenants');
+        Schema::dropIfExists('contracts_model');
     }
 };
