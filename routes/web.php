@@ -6,6 +6,7 @@ use App\Http\Controllers\TenantController;
 use App\Http\Controllers\ContractModelController;
 use App\Http\Controllers\ContractController;
 use App\Http\Controllers\BillController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -56,11 +57,14 @@ Route::middleware('auth')->group(function () {
 
 // BILLS
     Route::get('/bills', [BillController::class, 'index'])->name('bills.index');
-    Route::get('/bills/create', [BillController::class, 'create'])->name('bills.create');
     Route::post('/bills', [BillController::class, 'store'])->name('bills.store');
-    Route::get('/bills/{id}/edit', [BillController::class, 'edit'])->name('bills.edit');
-    Route::put('/bills/{id}', [BillController::class, 'update'])->name('bills.update');
-    Route::delete('/bills/{id}', [BillController::class, 'destroy'])->name('bills.destroy');
+    Route::put('/bills/{id}/update', [BillController::class, 'update'])->name('bills.update');
+
+// PAYMENT
+
+    Route::get('/payment', [PaymentController::class, 'index'])->name('payments.index');
+    Route::put('/payment/{billId}', [PaymentController::class, 'update'])->name('payments.update');
+
 
 //    PROFILE
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

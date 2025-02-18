@@ -12,18 +12,9 @@ class BillController extends Controller
 {
     public function index()
     {
-        $bills = Bill::all();
+        $bills = Bill::with('contract')->get();
         $contracts = Contract::all();
         return view('bills.index', compact('bills', 'contracts'));
-    }
-
-    public function create()
-    {
-        $bill = new Bill();
-        $contracts = Contract::all();
-        $boxes = Box::all();
-        $tenants = Tenant::all();
-        return view('bills.create', compact('bill', 'contracts', 'boxes', 'tenants'));
     }
 
     public function store(Request $request)
@@ -34,36 +25,12 @@ class BillController extends Controller
             'period_number' => 'required|integer',
         ]);
 
-        Bill::create($validatedData);
-        return redirect()->route('bills.index');
-    }
-
-    public function edit($id)
-    {
-        $bill = Bill::findOrFail($id);
-        $contracts = Contract::all();
-        $boxes = Box::all();
-        $tenants = Tenant::all();
-        return view('bills.edit', compact('bill', 'contracts', 'boxes', 'tenants'));
-    }
-
-    public function update(Request $request, $id)
-    {
-        $validatedData = $request->validate([
-            'contract_id' => 'integer',
-            'payment_montant' => 'numeric',
-            'period_number' => 'integer',
+        Bill::create([
+            'contract_id' => $validatedData['contract_id'],
+            'payment_montant' => $validatedData['payment_montant'],
+            'period_number' => $validatedData['period_number'],
         ]);
 
-        $bill = Bill::findOrFail($id);
-        $bill->update($validatedData);
-        return redirect()->route('bills.index');
-    }
-
-    public function destroy($id)
-    {
-        $bill = Bill::findOrFail($id);
-        $bill->delete();
         return redirect()->route('bills.index');
     }
 }
