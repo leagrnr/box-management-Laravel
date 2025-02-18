@@ -7,6 +7,7 @@ use App\Http\Controllers\ContractModelController;
 use App\Http\Controllers\ContractController;
 use App\Http\Controllers\BillController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\TaxeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -65,6 +66,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/payment', [PaymentController::class, 'index'])->name('payments.index');
     Route::put('/payment/{billId}', [PaymentController::class, 'update'])->name('payments.update');
 
+// TAXES
+
+    Route::get('/taxes', [TaxeController::class, 'index'])->name('taxes.index');
 
 //    PROFILE
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
