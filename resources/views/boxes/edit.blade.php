@@ -49,14 +49,6 @@
         </div>
         <div class="md:flex md:items-center mb-6">
             <div class="md:w-1/3">
-                <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-country">Pays : </label>
-            </div>
-            <div class="md:w-2/3">
-                <input type="text" name="country" id="country" value="{{$box->country}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
-            </div>
-        </div>
-        <div class="md:flex md:items-center mb-6">
-            <div class="md:w-1/3">
                 <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-m²">m² : </label>
             </div>
             <div class="md:w-2/3">
@@ -76,7 +68,7 @@
                 <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-description">Description : </label>
             </div>
             <div class="md:w-2/3">
-                <textarea name="description" id="description" rows="5" cols="5" value="{{$box->description}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"></textarea>
+                <textarea name="description" id="description" rows="5" cols="5" value="{{$box->description}}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">{{$box->description}}</textarea>
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">

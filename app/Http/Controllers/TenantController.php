@@ -23,17 +23,11 @@ class TenantController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'last_name' => 'required|string',
             'name' => 'required|string',
             'email' => 'required|email',
             'phone' => 'required|string',
-            'profession' => 'required|string',
             'address' => 'required|string',
             'city' => 'required|string',
-            'country' => 'required|string',
-            'date_of_birth' => 'required|string',
-            'place_of_birth' => 'required|string',
-            'bank_account' => 'required|string',
         ]);
 
         Tenant::create([
@@ -60,17 +54,11 @@ class TenantController extends Controller
     public function update(Request $request, $id)
     {
         $validated = $request->validate([
-            'last_name' => 'required|string',
             'name' => 'required|string',
             'email' => 'required|email',
             'phone' => 'required|string',
-            'profession' => 'required|string',
             'address' => 'required|string',
             'city' => 'required|string',
-            'country' => 'required|string',
-            'date_of_birth' => 'required|string',
-            'place_of_birth' => 'required|string',
-            'bank_account' => 'required|string',
         ]);
 
         $tenant = Tenant::findOrFail($id);
