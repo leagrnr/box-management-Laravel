@@ -11,17 +11,11 @@ class Tenant extends Model
 
     protected $fillable = [
         'user_id',
-        'last_name',
         'name',
         'email',
         'phone',
-        'profession',
         'address',
         'city',
-        'country',
-        'date_of_birth',
-        'place_of_birth',
-        'bank_account',
     ];
 
     public function contracts()
