@@ -22,10 +22,6 @@
         <table class="text-white font-bold font-xl m-auto border-collapse border border-sky-500 mb-5">
             <tr>
                 <th class="border border-sky-500 py-2">Nom</th>
-                <td class="border border-sky-500 py-2">{{ $tenant->last_name }}</td>
-            </tr>
-            <tr>
-                <th class="border border-sky-500 py-2">Prénom</th>
                 <td class="border border-sky-500 py-2">{{ $tenant->name }}</td>
             </tr>
             <tr>
@@ -37,32 +33,12 @@
                 <td class="border border-sky-500 py-2">{{ $tenant->phone }}</td>
             </tr>
             <tr>
-                <th class="border border-sky-500 py-2">Profession</th>
-                <td class="border border-sky-500 py-2">{{ $tenant->profession }}</td>
-            </tr>
-            <tr>
                 <th class="border border-sky-500 py-2">Adresse</th>
                 <td class="border border-sky-500 py-2">{{ $tenant->address }}</td>
             </tr>
             <tr>
                 <th class="border border-sky-500 py-2">Ville</th>
                 <td class="border border-sky-500 py-2">{{ $tenant->city }}</td>
-            </tr>
-            <tr>
-                <th class="border border-sky-500 py-2">Pays</th>
-                <td class="border border-sky-500 py-2">{{ $tenant->country }}</td>
-            </tr>
-            <tr>
-                <th class="border border-sky-500 py-2">Date de naissance</th>
-                <td class="border border-sky-500 py-2">{{ $tenant->date_of_birth }}</td>
-            </tr>
-            <tr>
-                <th class="border border-sky-500 py-2">Lieu de naissance</th>
-                <td class="border border-sky-500 py-2">{{ $tenant->place_of_birth }}</td>
-            </tr>
-            <tr>
-                <th class="border border-sky-500 py-2">Compte bancaire</th>
-                <td class="border border-sky-500 py-2">{{ $tenant->bank_account }}</td>
             </tr>
         </table>
     </div>

@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Box;
+use App\Models\Tenant;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -26,5 +28,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'kevin@prof.com',
             'password' => bcrypt('password'),
         ]);
+
+        Box::factory(10)->create();
+
+        Tenant::factory(10)->create();
     }
 }

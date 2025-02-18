@@ -24,15 +24,7 @@
             @method('PUT')
             <div class="md:flex md:items-center mb-6">
                 <div class="md:w-1/3">
-                    <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="last_name">Nom :</label>
-                </div>
-                <div class="md:w-2/3">
-                    <input type="text" name="last_name" id="last_name" value="{{ $tenant->last_name }}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
-                </div>
-            </div>
-            <div class="md:flex md:items-center mb-6">
-                <div class="md:w-1/3">
-                    <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="name">Prénom :</label>
+                    <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="name">Nom :</label>
                 </div>
                 <div class="md:w-2/3">
                     <input type="text" name="name" id="name" value="{{ $tenant->name }}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
@@ -56,14 +48,6 @@
             </div>
             <div class="md:flex md:items-center mb-6">
                 <div class="md:w-1/3">
-                    <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="profession">Profession :</label>
-                </div>
-                <div class="md:w-2/3">
-                    <input type="text" name="profession" id="profession" value="{{ $tenant->profession }}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
-                </div>
-            </div>
-            <div class="md:flex md:items-center mb-6">
-                <div class="md:w-1/3">
                     <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="address">Adresse :</label>
                 </div>
                 <div class="md:w-2/3">
@@ -76,38 +60,6 @@
                 </div>
                 <div class="md:w-2/3">
                     <input type="text" name="city" id="city" value="{{ $tenant->city }}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
-                </div>
-            </div>
-            <div class="md:flex md:items-center mb-6">
-                <div class="md:w-1/3">
-                    <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="country">Pays :</label>
-                </div>
-                <div class="md:w-2/3">
-                    <input type="text" name="country" id="country" value="{{ $tenant->country }}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
-                </div>
-            </div>
-            <div class="md:flex md:items-center mb-6">
-                <div class="md:w-1/3">
-                    <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="date_of_birth">Date de naissance :</label>
-                </div>
-                <div class="md:w-2/3">
-                    <input type="date" name="date_of_birth" id="date_of_birth" value="{{ $tenant->date_of_birth }}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
-                </div>
-            </div>
-            <div class="md:flex md:items-center mb-6">
-                <div class="md:w-1/3">
-                    <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="place_of_birth">Lieu de naissance :</label>
-                </div>
-                <div class="md:w-2/3">
-                    <input type="text" name="place_of_birth" id="place_of_birth" value="{{ $tenant->place_of_birth }}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
-                </div>
-            </div>
-            <div class="md:flex md:items-center mb-6">
-                <div class="md:w-1/3">
-                    <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="bank_account">Compte bancaire :</label>
-                </div>
-                <div class="md:w-2/3">
-                    <input type="text" name="bank_account" id="bank_account" value="{{ $tenant->bank_account }}" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500">
                 </div>
             </div>
             <div class="md:flex md:items-center">
