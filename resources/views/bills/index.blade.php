@@ -16,44 +16,44 @@
 
     <body>
     <div class="flex flex-col items-center">
-        <h1 class="text-white font-bold font-xl mb-5">Liste des factures</h1>
+        <h1 class="text-white font-bold font-xl mb-5">Liste des contrats</h1>
 
-        <table class="text-white font-bold font-xl m-auto  border-collapse border border-sky-500 mb-5">
-            <thead >
+        <table class="text-white font-bold text-lg m-auto border-collapse border border-sky-500 mb-5">
+            <thead>
             <tr>
-                <th class="border border-sky-500 px-2">Locataire</th>
-                <th class="border border-sky-500 px-2">Montant du paiement</th>
-                <th class="border border-sky-500 px-2">Période du paiement</th>
-                <th class="border border-sky-500 px-2">Actions</th>
+                <th class="border border-sky-500 px-2 py-1">ID</th>
+                <th class="border border-sky-500 px-2 py-1">Box</th>
+                <th class="border border-sky-500 px-2 py-1">Locataire</th>
+                <th class="border border-sky-500 px-2 py-1">Date début</th>
+                <th class="border border-sky-500 px-2 py-1">Date fin</th>
+                <th class="border border-sky-500 px-2 py-1">Prix mensuel</th>
+                <th class="border border-sky-500 px-2 py-1">Actions</th>
             </tr>
             </thead>
             <tbody>
-                @foreach($bills as $bill)
+            @foreach($contracts as $contract)
                 <tr>
-                    <td class="border border-sky-500 px-2">{{ $bill->contract->tenant->name }}</td>
-                    <td class="border border-sky-500 px-2">{{ $bill->payment_montant }} €</td>
-                    <td class="border border-sky-500 px-2">{{ $bill->period_number }}</td>
-                    <td class="border border-sky-500 px-2">
-                        <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold px-4 my-1 w-full rounded">
-                            <a href="{{ route('bills.edit', $bill->id) }}">Modifier</a>
-                        </button>
-
-                        <form action="{{ route('bills.destroy', $bill->id) }}" method="POST">
+                    <td class="border border-sky-500 px-2 py-1">{{ $contract->id }}</td>
+                    <td class="border border-sky-500 px-2 py-1">{{ $contract->box->name }}</td>
+                    <td class="border border-sky-500 px-2 py-1">{{ $contract->tenant->name }}</td>
+                    <td class="border border-sky-500 px-2 py-1">{{ $contract->date_start }}</td>
+                    <td class="border border-sky-500 px-2 py-1">{{ $contract->date_end }}</td>
+                    <td class="border border-sky-500 px-2 py-1">{{ number_format($contract->monthly_price, 2) }} €</td>
+                    <td class="border border-sky-500 px-2 py-1">
+                        <form action="{{ route('bills.store') }}" method="POST">
                             @csrf
-                            @method('DELETE')
-                            <input type="hidden" value="{{ $bill->id }}" name="id">
-                            <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold px-4 my-1  w-full rounded ">Supprimer</button>
+                            <input type="hidden" name="contract_id" value="{{ $contract->id }}">
+                            <input type="hidden" name="payment_montant" value="{{ $contract->monthly_price }}">
+                            <input type="hidden" name="period_number" value="1">
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 my-1 w-full rounded">
+                                Générer une facture
+                            </button>
                         </form>
                     </td>
                 </tr>
-                @endforeach
-
+            @endforeach
             </tbody>
         </table>
-
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-10 rounded dark:bg-blue-500 dark:hover:bg-blue-700">
-            <a href="{{ route('bills.create') }}">Ajouter une facture</a>
-        </button>
     </div>
     </body>
 </x-app-layout>
