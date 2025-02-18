@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('address');
             $table->string('city');
-            $table->string('country');
             $table->string('m²');
             $table->string('price_per_month');
             $table->string('description');

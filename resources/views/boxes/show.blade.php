@@ -35,10 +35,6 @@
                 <td class="border border-sky-500 px-2">{{ $box->city }}</td>
             </tr>
             <tr>
-                <th class="border border-sky-500 px-2">Pays</th>
-                <td class="border border-sky-500 px-2">{{ $box->country }}</td>
-            </tr>
-            <tr>
                 <th class="border border-sky-500 px-2">m²</th>
                 <td class="border border-sky-500 px-2">{{ $box->m² }}</td>
             </tr>

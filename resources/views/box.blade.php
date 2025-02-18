@@ -24,7 +24,6 @@
                 <th class="border border-sky-500 px-2">Nom</th>
                 <th class="border border-sky-500 px-2">Adresse</th>
                 <th class="border border-sky-500 px-2">Ville</th>
-                <th class="border border-sky-500 px-2">Pays</th>
                 <th class="border border-sky-500 px-2">Actions</th>
             </tr>
         </thead>
@@ -34,7 +33,6 @@
                     <td class="border border-sky-500 px-2">{{ $box->name }}</td>
                     <td class="border border-sky-500 px-2">{{ $box->address }}</td>
                     <td class="border border-sky-500 px-2">{{ $box->city }}</td>
-                    <td class="border border-sky-500 px-2">{{ $box->country }}</td>
                     <td class="border border-sky-500 px-2">
                         <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold px-4 my-1 w-full rounded">
                             <a href="{{ route('boxes.edit', $box->id) }}">Modifier</a>
