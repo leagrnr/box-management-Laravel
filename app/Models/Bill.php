@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Bill extends Model
 {
@@ -11,6 +12,10 @@ class Bill extends Model
         'payment_date',
         'payment_montant',
         'period_number',
+    ];
+
+    protected $casts = [
+        'payment_date' => 'date',
     ];
 
     public function contract()
